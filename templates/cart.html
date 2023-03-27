@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section class="ca_0">
+    <div class="card ca_1">
+        <form action="{% url 'checkout' %}" class="d-flex">
+            <table class="ca_2">
+                <tr class="">
+                    <th>
+                        <p>PRODUCT</p>
+                    </th>
+                    <th>
+                        <p>PRICE</p>
+                    </th>
+                    <th>
+                        <p>QTY</p>
+                    </th>
+                    <th>
+                        <p>TOTAL</p>
+                    </th>
+                </tr>
+                {% for item in cart %}
+                <tr class="">
+                    <td>
+                        <a href="#" class="text-decoration-none d-flex text-black">
+                            <div class="ca_1_1">
+                                <img src="{{item.product.image1.url}}" alt="AWAL">
+                            </div>
+                            <div class="ca_1_2 ">
+                                <b>{{item.product.title}}</b>
+                                <p>-</p>
+                                <p>size: 60cm*60cm</p>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="">
+                        <p>USD {{item.product.price}}</p>
+                    </td>
+                    <td class="">
+                        <p class="border p_w_1">20</p>
+                    </td>
+                    <td class="">
+                        <p>USD 2420.00</p>
+                    </td>
+                    <td class="">
+                        <a href="{% url 'cart_remove' item.product.pk    %}" class="text-dark"><i class="fa-solid fa-trash-can pb-3"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+                
+            </table>
+            <div class="ca_1_3">
+                <div>
+                    <div class="su_1">
+                        <b>SUMMARY</b>
+                        <div class="d-flex">
+                            <p>Subtotal</p>
+                            <span>USD 4840.00</span>
+                        </div>
+                        <div class="d-flex">
+                            <p>Order Total</p>
+                            <span>USD 4840.00</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="my-2 d-grid">
+                            <button class="bu_1 btn-block">PROCEED TO CHECKOUT</button>
+                        </div>
+                        <div class="my-2 d-grid">
+                            <button class="bu_1 btn-block">BACK TO SHOPPING</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+{% endblock content %}

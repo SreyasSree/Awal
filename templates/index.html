@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+    <section class="a_2">
+        <div class="a_3">
+            <h1>USD 94.15</h1>
+            <button class="btn btn-dark">Add to cart</button>
+        </div>
+    </section>
+    <section class="container b_0">
+        <div class="row">
+            <div class="d-flex col-lg-3">
+                <div class="b_1 mt-3"><img src="{% static 'images/Free Shipping.png' %}" alt="AWAL"></div>
+                <div class="mt-3 mx-2 b_2"><p>Free Delivery <br><span>In 10 Days</span></p></div>
+            </div>
+            <div class="d-flex col-lg-3 c_4">
+                <div class="b_1 mt-3"><img src="{% static 'images/High Quality.png' %}" alt="AWAL"></div>
+                <div class="mt-3 mx-2 b_2"><p>High Quality <br><span> No Worries</span></p></div>
+            </div>
+            <div class="d-flex col-lg-3 c_4">
+                <div class="b_1 mt-3"><img src="{% static 'images/Secure Payment.png' %}" alt="AWAL"></div>
+                <div class="mt-3 mx-2 b_2"><p>Secure Payment <br><span> Riskfree Payment</span></p></div>
+            </div>
+            <div class="d-flex col-lg-3 c_4">
+                <div class="b_1 mt-3"><img src="{% static 'images/Worldwide Shipping.png' %}" alt="AWAL"></div>
+                <div class="mt-3 mx-2 b_2"><p>Worldwide Shipping <br><span> Get all over the world</span></p></div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 container" id="cat">
+        <div class="row">
+            {% for cate in cat %}
+            <a href="{% url 'products' cate.pk %}" class="text-decoration-none d-flex justify-content-center text-center col-lg-4 text-body">
+                <div>
+                    <div class="c_1">
+                        <img src="{{cate.image.url}}" alt="AWAL">
+                    </div>
+                    <h2>{{cate.title}}</h2>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    <section class=" bg-light pb-5">
+        <div class="container">
+            <h2 class="text-center py-4">PRODUCTS</h2>
+            <div class="row g-2">
+                {% for product in prod %}
+                <a href="{% url 'productsingle' product.pk %}" class="col-lg-3 text-decoration-none text-body text-center">
+                    <div>
+                        <img src="{{product.image1.url}}" alt="AWAL">
+                    </div>
+                    <div class="bg-white">
+                        <h3 class="py-3">USD {{product.price}}</h3>
+                        <p class="py-1">{{product.title}}</p>
+                    </div>
+                </a>
+                {% endfor %}
+                
+            </div>
+            <div class="text-center">
+                <button class="btn btn-dark"><a href="{% url 'product' %}" class="text-light text-decoration-none">VIEW MORE</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="d-flex justify-content-around py-5">
+        <div class="text-center e_1">
+            <h2>MASHALLAH</h2>
+            <h1>.</h1>
+            <p>METAL ISLAMIC WALL ART</p>
+            <h3>USD 67.95</h3>
+            <button class="btn btn-dark"><a class="text-decoration-none text-white" href="{% url 'productsingles' %}1">VIEW PRODUCT</a></button>
+        </div>
+        <div class="d_1">
+            <img src="{% static 'images/1.6.webp' %}" alt="AWAL">
+        </div>
+    </section>
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center py-4">LATEST</h2>
+            <div class="row g-2">
+                {% for product in pro %}
+                <a href="{% url 'productsingle' product.pk %}" class="col-lg-3 text-decoration-none text-body text-center">
+                    <div>
+                        <img src="{{product.image1.url}}" alt="AWAL">
+                    </div>
+                    <div class="bg-white">
+                        <h3 class="py-3">USD {{product.price}}</h3>
+                        <p class="py-1">{{product.title}}</p>
+                    </div>
+                </a>
+                {% endfor %}
+                
+            </div>
+            <div class="text-center">
+                <button class="btn btn-dark"><a href="{% url 'product' %}" class="text-light text-decoration-none">VIEW MORE</a></button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <a href="#" class="d-flex text-decoration-none">
+            <div class="z_1">
+                <h1 class="text-white opacity-50 float-end">SPECIAL <br> COLLECTION</h1>
+            </div>
+            <div class="z_2">
+                <div class="z_3"><img src="{% static 'images/19.64.png' %}" alt="AWAL"></div>
+                <p class="text-dark text-center">LIMITED STOCK</p>
+            </div>
+        </a>
+    </section>
+    <section class="y_1">
+
+    </section>
+    
+
+    {% endblock content %}

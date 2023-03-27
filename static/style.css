@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Oswald', sans-serif !important;
+
+    font-family: 'Roboto Flex', sans-serif;
+}
+img{
+    width: 100%;
+}
+.a_1{
+    width: 150px;
+}
+.a_2{
+    background-image: url(./images/1_1.webp);
+    height: 700px;
+    background-attachment:fixed;
+}
+.a_3{
+    position: absolute;
+    display: block;
+    left: 300px;
+    bottom: 200px;
+}
+.b_1{
+    width: 50px;
+}
+.b_2 span{
+    font-size:small;
+    color: grey;
+}
+.b_0{
+    padding: 20px 0;
+    border-bottom: 1px grey solid;
+}
+.c_1{
+    width: 300px;
+}
+.c_4{
+    border-left: 1px solid grey;
+    
+}
+.d_1{
+    width: 500px;
+}
+.e_1{
+    position:sticky;
+    left: 450px;
+}
+.z_1{
+    width: 68%;
+    background-image: url(./images/index.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.z_2{
+    width: 33%;
+    background-color: #424347;
+}
+.z_1 h1{
+    margin: 200px 100px;
+}
+.z_3{
+    width: 80%;
+    margin: 0 auto ;
+}
+.y_1{
+    height: 250px;
+    width: 100%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.x_1{
+    width: 300px;
+    height: 300px;
+}
+.w_1{
+    margin: 75px 0px 75px 300px;
+    padding: 0 100px;
+}
+.w_2{
+    margin-right: 360px;
+}
+.w_3{
+    padding-left: 300px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid gray;
+}
+.q_1{
+    margin: 0 auto;
+    width: fit-content;
+}
+.q_2{
+    font-size: 30px;
+}
+.s_1{
+    background-color: #2b312a;
+    color: white;
+}
+.btn_clr{
+    background-color: #2b312a;
+    color: white;
+}
+.btn_clr2{
+    color: rgb(175, 173, 173);
+    border: none;
+    background-color: transparent;
+}
+.a_5{
+    padding-top: 30px;
+}
+.g_1{
+    width: 50px;
+}
+.g_0{
+    padding: 100px 200px;
+    gap: 200px;
+}
+.a_0{
+    box-shadow: 5px 5px 5px rgb(231, 231, 231);
+}
+.l_1{
+    border: 1px solid gray;
+    padding: 35px;
+}
+.l_0{
+    width: 650px;
+}
+.l_1_1{
+    width: 500px;
+}
+.d_2{
+    margin: 50px 150px;
+    gap: 50px;
+}
+.d_3{
+    height: 360px;
+    padding: 0px 150px;
+}
+.d_3_1 p{
+    text-align: right;
+}
+.d_3 h1{
+    font-size: 90px;
+}
+.d_3_2{
+    padding: 85px 0;
+}
+.h_1{
+    width: 650px;
+    margin: 35px 50px;
+}
+.h_0{
+    width: fit-content;
+    margin: 0 auto;
+}
+.h_2{
+    margin: 35px 0;
+    width: 400px;
+}
+.h_2_1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(223, 222, 222);
+    margin-bottom: 5px;
+}
+.co_1{
+    color: rgb(175, 173, 173);
+    font-size: small;
+}
+.h_2_3{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.h_3{
+    margin: 150px 400px;
+}
+.h_1_1{
+    column-gap: 5%;
+    margin-top: 20px;
+}
+.h_1_2{
+    width: 30%;
+    margin: 0 auto;
+}
+.ca_1{
+    margin: 100px 300px;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+.ca_0{
+    margin: 0 auto;
+}
+.ca_1_1{
+    width: 130px;
+    padding: 20px;
+    
+}
+.ca_1_2{
+    padding-top: 15px;
+}
+.ca_1_3{
+    width: 35%;
+    padding-left: 50px;
+}
+.ca_1_4{
+    width: 30%;
+    padding-left: 50px;
+}
+.ca_2{
+    width: 65%;
+}
+.p_w_1{
+    width: fit-content;
+    padding: 6px;
+}
+.bu_1{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    width:auto;
+}
+tr{
+    border-bottom: 1px solid rgb(223, 222, 222) !important;
+}
+.su_1{
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+.su_1 b{
+    padding-bottom: 10px;
+}
+
+.float{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    left: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 0px 0px;
+    z-index: 100;
+}
+select{
+    background-color: white;
+    border-radius: 0;
+    border: 1px solid rgb(223, 222, 222);
+    padding: 8px;
+}
+.su_2{
+    border-bottom: 1px solid rgb(175, 173, 173);
+    border-top: 1px solid rgb(175, 173, 173);
+    
+}
+.ca_1_4 p{
+    margin-bottom: 5px !important;
+}
+.k_1 input{
+    padding: 10px;
+    width: 350px;
+}
+.k_1{
+    padding-top: 10px;
+}
+.k_1 p{
+    margin-bottom: 2px !important;
+}
+
+.k_2{
+    padding-top: 10px;
+}
+.k_2 p{
+    margin-bottom: 2px !important;
+}

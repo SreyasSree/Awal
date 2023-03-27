@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section class=" h_0">
+    <form action="{% url 'cart_add' pro.pk %}" class="d-flex">
+        <div class="h_1">
+            <div><img src="{{pro.image1.url}}" alt="AWAL"></div>
+            <div class="d-flex h_1_1">
+                <div class="h_1_2"><img src="{{pro.image1.url}}" alt="AWAL"></div>
+                {% if pro.image2 %}
+                <div class="h_1_2"><img src="{{pro.image2.url}}" alt="AWAL"></div>
+                {% endif %}
+                {% if pro.image3 %}
+                <div class="h_1_2"><img src="{{pro.image3.url}}" alt="AWAL"></div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="h_2">
+            <h2>{{pro.title}}</h2>
+            <p>Alhamdulillah</p>
+            <div>
+                <p class="co_1">Price</p>
+                <div class="my-3 h_2_1"><h3>USD {{pro.price}}</h3><span class="text-decoration-line-through">USD {{pro.cut_price}}</span></div>
+            </div>
+            <p class="h_2_1 co_1">{{pro.size}}</p>
+            <div class="my-3 h_2_1"><p class="co_1">detailsss</p></div>
+            <div class="my-3 h_2_1">
+                <p class="co_1">color</p>
+                <div>
+                    <select name="" id="">
+                        <option value="">Select a color</option>
+                        {% for item in pro.colors %}
+                        <option value="">{{item}}</option>
+                        {% endfor %}
+                        <option value="">{{pro.colors}}</option>
+                        <option value="">{{pro.colors}}</option>
+                        
+                    </select>
+                </div>
+            </div>
+        <div class="my-3 h_2_1">
+                <p class="co_1">Size</p>
+                <div>
+                    <select name="" id="">
+                        <option value="">{{pro.size}}</option>
+                        <option value="">{{pro.size}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="my-3 h_2_1">
+                <p class="co_1">Quantity</p>
+                <div>
+                    <select name="" id="">
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+                        <option value="">{{pro.quantity}}</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="my-3 d-grid h_2_2">
+                <button class="h_2_3 btn-block">ADD TO CART <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+    </form>
+</section>
+<div class="h_3">
+    <p>REVIEW</p>
+</div>
+
+{% endblock content %}

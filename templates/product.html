@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section class="text-bg-dark d_3">
+    <div class="d_3_2">
+        <p>AWAL</p>
+        <h1>Products</h1>
+    </div>
+    <div class="d_3_1">
+        <p><a class="text-white text-decoration-none" href="#">Home</a> / About Us</p>
+    </div>
+</section>
+
+
+<section class=" bg-light pb-5">
+    <div class="container">
+        <h2 class="text-center py-4"></h2>
+        <div class="row g-2">
+            {% for product in pro %}
+            <a href="{% url 'productsingle' product.pk %}" class="col-lg-3 text-decoration-none text-body text-center">
+                <div>
+                    <img src="{{product.image1.url}}" alt="AWAL">
+                </div>
+                <div class="bg-white">
+                    <h3 class="py-3">USD {{product.price}}</h3>
+                    <p class="py-1">{{product.title}}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        
+    </div>
+</section>
+
+
+{% endblock content %}

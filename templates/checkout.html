@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section class="ca_0">
+    <div class="card ca_1">
+        <form action="{% url 'checkout' %}" class="d-flex" method="POST">
+            {% csrf_token %}
+            <div>
+                <div class="k_1">
+                    <p>Select Address</p>
+                    <input type="text">
+                </div>
+                <div class="d-flex gap-5">
+                    <div class="k_1">
+                        <p>First Name *</p>
+                        {{form.first_name}}
+                    </div>
+                    <div class="k_1">
+                        <p>Last Name *</p>
+                        {{form.last_name}}
+                    </div>
+                </div>
+                <div class="d-flex gap-5">
+                    <div class="k_1">
+                        <p>Email Address *</p>
+                        {{form.email}}
+                    </div>
+                    <div class="k_1">
+                        <p>Address *</p>
+                        {{form.address}}
+                    </div>
+                </div>
+                <div class="d-flex gap-5">
+                    <div class="k_1">
+                        <p>State/Province *</p>
+                        {{form.state}}
+                    </div>
+                    <div class="k_1">
+                        <p> Zip/Postal Code * </p>
+                        {{form.postal}}
+                    </div>
+                </div>
+                <div class="d-flex gap-5">
+                    <div class="k_1">
+                        <p>Country</p>
+                        {{form.country}}
+                    </div>
+                    <div class="k_1">
+                        <p>Phone *</p>
+                        {{form.phone}}
+                    </div>
+                </div>
+                <div class="k_2 d-flex gap-3">
+                    <p>Save Address</p>
+                    {{form.save}}
+                </div>
+            </div>
+            <div class="ca_1_4">
+                <div>
+                    <div class="su_1">
+                        <b>SUMMARY</b>
+                        <div>
+                            <p class="su_2 py-3">
+                                <button class="btn_clr2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    {{cart | length}} item in cart
+                                    <i class="fa-solid fa-angle-down ml-2"></i>
+                                </button>
+                            </p>
+                            <div class="mb-5 collapse" id="collapseExample">
+                                {% for item in cart %}
+                                <div class="d-flex">
+                                    <div class="w-50 p-2">
+                                        <img src="{{item.product.image1.url}}" alt="">
+                                    </div>
+                                    <div class="w-50 p-2">
+                                        <b>{{item.product.title}}</b>
+                                        <p>Color: BLACK</p>
+                                        <p>Size: 100cm * 100cm</p>
+                                        <p>QTY: 1</p>
+                                        <b>USD {{item.product.price}}</b>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Subtotal</p>
+                            <span>USD 4840.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p>Order Total</p>
+                            <span>USD 4840.00</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="my-3 ">
+                            <button class="bu_1">PROCEED TO PAYMENT</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+{% endblock content %}

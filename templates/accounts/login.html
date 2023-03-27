@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- LOG IN -->
+<link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+<script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+<section class="g_0 d-flex">
+    <div class="l_0">
+        <h2>Welcome to Awal Mohammed</h2>
+        <p>Islamic Wall Art - Islamic Wall paintings , The first Bahraini project, distributor for the Middle East Stainless steel metal acrylic copper. </p>
+
+        <div>
+            <ul class="">
+                <li class="d-flex"><div class="g_1"><img src="{% static 'images/123.png' %}" alt="AWAL"></div>
+                <div>We guarentee you the hight quality product which is important for client satisfaction.</div></li>
+            </ul>
+            <ul>
+                <li class="d-flex"><div class="g_1"><img src="{% static 'images/234.png' %}" alt="AWAL"></div>
+                <div>Your money is safe with us, till your order reaches your hands.</div></li>
+            </ul>
+            <ul>
+                <li class="d-flex"><div class="g_1"><img src="{% static 'images/345.png' %}" alt="AWAL"></div>
+                <div>We value the customer relationships, we maintain a good customer friendly atmosphere.</div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="l_1">
+        <h4 class="text-center">Login to Your Account</h4>
+        <form action="">
+            <div>
+                <input class="py-2 pr-2 l_1_1" name="phone" type="text" name="mobile number" placeholder="Mobile number" required  id="phone">
+                <script>
+                    var input = document.querySelector("#phone");
+                    window.intlTelInput(input, {
+                        separateDialCode: true,
+                        excludeCountries: ["in", "il"],
+                        preferredCountries: ["ru", "jp", "pk", "no"]
+                    });
+                </script> 
+            </div>
+            <div class="d-grid mt-3"><button class="btn btn-dark btn-block">Sent OTP</button></div>
+            
+        </form>
+    </div>
+</section>
+
+
+
+{% endblock content %}
